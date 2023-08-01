@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Noto Sans Lao';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NotoSansLao-Regular.eot);
+  src: url(../fonts/NotoSansLao-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NotoSansLao-Regular.woff2) format('woff2'),
+    url(../fonts/NotoSansLao-Regular.woff) format('woff'),
+    url(../fonts/NotoSansLao-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'airnoy';
+  font-style: normal;
+  
+  src: 
+    url(../fonts/airnoy.ttf) format('truetype');
+}
+* {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', 'Saysettha OT', 'sans-serif' !important;
+}
+body .text-body-2 {
+  font-family: 'Noto Sans Lao', 'Phetsarath OT', 'Saysettha OT', 'sans-serif' !important;
+}
+.bottom-bar {
+  /* height: 60px;  */
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+.w-100 {
+  width: 100%;
+  font-size: 16px !important;
+  background-color: white;
+}
+::-webkit-scrollbar { 
+  display: none;
+ }
+
+ .my-footer {
+  height: auto;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0px;
+  max-width: none;
+}

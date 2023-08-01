@@ -1,0 +1,73 @@
+#Note!
+before you will run app please check computer have nodejs
+check node js by use command
+    node --version
+    npm --version
+if not installed then download and install it
+https://nodejs.org/en/download/
+
+before you run this Project please following
+open project by editor like vscode or atom -> open terminal on editor -> cd root project
+and then type on terminal 
+```bash
+npm installl
+
+after that wait for installing dependencies 
+then start server using following commands
+```bash
+npm run dev   OR    yarn dev     [for development]
+
+------------------------------------------------------------------------------------------------------
+
+1. create nuxt project
+ --> npx nuxi@latest init 'Your Project name'
+
+2.install Dependencies
+    # yarn install vuetify
+    - yarn add vuetify@next sass 
+    - yarn add @mdi/font
+    - yarn add vite-plugin-vuetify  => (optional)
+    # npm installl
+     - npm i vuetify@3.3.10 sass
+     - npm i @mdi/font
+     - npm i vite-plugin-vuetify
+     - npm i axios moment
+3. integrate with nuxt3
+    - create vuetify.js in plugins folder
+    - copy this code pasts in vuetify.js
+
+    // plugins/vuetify.js
+    import { createVuetify } from 'vuetify'
+    import * as components from 'vuetify/components'
+    import * as directives from 'vuetify/directives'
+
+    export default defineNuxtPlugin(nuxtApp => {
+        const vuetify = createVuetify({
+            ssr: true,
+            components,
+            directives,
+        })
+
+        nuxtApp.vueApp.use(vuetify)
+    })
+    
+    - go to nuxt.config.js copy this code to pasts there
+
+        export default defineNuxtConfig({
+        devtools: { enabled: true },
+            css: [
+                "@/assets/css/main.css",
+                "vuetify/lib/styles/main.sass",
+                "@mdi/font/css/materialdesignicons.min.css",
+            ],
+            build: {
+                transpile: ["vuetify",],
+            },
+            vite: {
+                define: {
+                'process.env.DEBUG': false,
+                },
+            },
+        })
+
+Done ! how to integrate vuetify with nuxt 3. Let's go to coding
